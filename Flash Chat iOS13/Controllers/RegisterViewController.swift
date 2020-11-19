@@ -19,7 +19,7 @@ class RegisterViewController: UIViewController {
             
             Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
                 if let e = error {
-                    print(e)
+                    print("Error: \(e)")
                 } else {
                     self.performSegue(withIdentifier: "RegisterToChat", sender: self)
                 }
